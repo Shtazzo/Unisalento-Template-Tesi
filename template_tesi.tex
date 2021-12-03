@@ -1,0 +1,148 @@
+\documentclass[a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{verbatim}
+\usepackage{listings}
+
+\usepackage{hyperref}
+\usepackage{etoc}
+
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+
+\usepackage{fancyvrb}
+\usepackage{xcolor}
+
+\usepackage{graphicx} % package per grafica
+\graphicspath{ {./media/} } % path da dove prendere le immagini da utilizzare
+
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    top=30mm,
+    bottom =30mm,
+    left=35mm,
+    right=35mm
+    }
+
+
+\renewcommand*\contentsname{Indice}
+
+% definisce il comando \unisalento
+\newcommand{\unisalento}{\href{http://www.unisalento.it}{\textbf{\emph{Università del Salento}}}}
+
+% colori per snippet di codice
+\definecolor{codegreen}{rgb}{0,0.7,0.5}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codeblue}{rgb}{0,0.5,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.95}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{orange},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codeblue},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% frontespizio creato con il comando \title
+\title{
+    \includegraphics[scale=0.4]{unisalento_logo.jpg}\\[1cm]
+    {\Huge{\textbf{Università Del Salento}}}\\
+    \normalfont{Corso di Laurea (Magistrale/Triennale) in \\ \ldots (Nome CdL)}
+    \par\noindent\rule{\textwidth}{0.4pt}\\
+    
+    \vspace{0.5cm}
+    
+    \par \large{Tesi di Laurea in \emph{\ldots}}\\
+    
+    \vspace{0.5cm}
+
+    \par \Large{\textbf{Titolo tesi}}\\
+    
+    \vspace{7.5cm}
+
+    \begin{minipage}{\textwidth}
+        \par \small{Relatore/Relatrice} 
+        \par \emph{Chiar.mo/ma Prof.re/ssa \ldots (Nome Cognome)} \\
+        \par \small{Correlatore}
+        \par \emph{Dott. re/ssa \ldots (Nome Cognome)}
+    \end{minipage}
+
+    \par \hfill \small{Laureando 
+    \par \hfill \emph{\ldots (Nome Cognome)}
+    \par \hfill \emph{Matricola n° \ldots}}
+    \par\noindent\rule{\textwidth}{0.4pt}
+    \vspace{0.5cm}
+    
+    \small{ANNO ACCADEMICO 2021/2022}
+    \thispagestyle{empty}
+    }
+    
+\author{} % lasciare vuoto
+\date{}   % lasciare vuoto
+
+\hypersetup{hidelinks}
+
+\begin{document}
+
+    % Creazione frontespizio
+    \maketitle
+    
+    % Creazione dell'indice
+    \hypersetup{hidelinks}
+    \tableofcontents
+    \thispagestyle{empty}
+    \newpage
+    
+    % Capitolo: "Introduzione"
+    \hypersetup{hidelinks}
+    \include{capitoli/introduzione.tex}
+    
+    % Capitolo 1
+    \hypersetup{hidelinks}
+    \include{capitoli/capitolo_1.tex}
+    
+    % Capitolo 2
+    \hypersetup{hidelinks}
+    \include{capitoli/capitolo_2.tex}
+    
+    % Capitolo 3
+    \hypersetup{hidelinks}
+    \include{capitoli/capitolo_3.tex}
+    
+    % Capitolo: "Conclusioni"
+    \hypersetup{hidelinks}
+    \include{capitoli/conclusioni.tex}
+    
+    % Capitolo: "Ringraziamenti"
+    \hypersetup{hidelinks}
+    \include{capitoli/ringraziamenti.tex}
+
+    % Lista delle figure
+    \newpage
+    \listoffigures
+    
+    % Lista delle tabelle
+    \newpage
+    \listoftables
+\end{document}
